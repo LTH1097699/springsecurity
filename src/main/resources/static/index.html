@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script type="text/javascript">
+
+    function call() {
+        var h = new XMLHttpRequest();
+        h.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200 ) {
+                document.getElementById("output").innerHTML = this.responseText
+            }
+        }
+
+<!--        h.open("GET", "http://localhost:8080/demo");-->
+        h.open("GET", "http://127.0.0.1:8080/demo"); <!-- you muse add crossorigin in controller -->
+        h.send();
+    }
+
+    </script>
+</head>
+<body onload="call()">
+<p id="output"></p>
+
+</body>
+</html>

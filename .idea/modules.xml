@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springsecurity.main.iml" filepath="$PROJECT_DIR$/.idea/modules/springsecurity.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springsecurity6_oauth2authorizationserver/springsecurity.springsecurity6_oauth2authorizationserver.main.iml" filepath="$PROJECT_DIR$/.idea/modules/springsecurity6_oauth2authorizationserver/springsecurity.springsecurity6_oauth2authorizationserver.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springsecurity7_oauth2resourceserver/springsecurity.springsecurity7_oauth2resourceserver.main.iml" filepath="$PROJECT_DIR$/.idea/modules/springsecurity7_oauth2resourceserver/springsecurity.springsecurity7_oauth2resourceserver.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springsecurity8_oauth2clientserver/springsecurity.springsecurity8_oauth2clientserver.main.iml" filepath="$PROJECT_DIR$/.idea/modules/springsecurity8_oauth2clientserver/springsecurity.springsecurity8_oauth2clientserver.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springsecurity9_oauth2multitenancy/springsecurity.springsecurity9_oauth2multitenancy.main.iml" filepath="$PROJECT_DIR$/.idea/modules/springsecurity9_oauth2multitenancy/springsecurity.springsecurity9_oauth2multitenancy.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springsecurity9_oauth2multitenancy_resourceserver/springsecurity.springsecurity9_oauth2multitenancy_resourceserver.main.iml" filepath="$PROJECT_DIR$/.idea/modules/springsecurity9_oauth2multitenancy_resourceserver/springsecurity.springsecurity9_oauth2multitenancy_resourceserver.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springsecurity9_oauth2multitennancy_jwtauthenticationserver/springsecurity.springsecurity9_oauth2multitennancy_jwtauthenticationserver.main.iml" filepath="$PROJECT_DIR$/.idea/modules/springsecurity9_oauth2multitennancy_jwtauthenticationserver/springsecurity.springsecurity9_oauth2multitennancy_jwtauthenticationserver.main.iml" />
+    </modules>
+  </component>
+</project>

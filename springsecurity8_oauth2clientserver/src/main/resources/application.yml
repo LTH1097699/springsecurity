@@ -1,0 +1,9 @@
+
+server:
+  port: 7070
+
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/test"
+    username: "root"
+    password: "123456"

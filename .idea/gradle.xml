@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/springsecurity6_oauth2authorizationserver" />
+            <option value="$PROJECT_DIR$/springsecurity7_oauth2resourceserver" />
+            <option value="$PROJECT_DIR$/springsecurity8_oauth2clientserver" />
+            <option value="$PROJECT_DIR$/springsecurity9_oauth2multitenancy" />
+            <option value="$PROJECT_DIR$/springsecurity9_oauth2multitenancy_resourceserver" />
+            <option value="$PROJECT_DIR$/springsecurity9_oauth2multitennancy_jwtauthenticationserver" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

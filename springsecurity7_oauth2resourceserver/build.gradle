@@ -1,0 +1,38 @@
+plugins {
+    id "java"
+    id "idea"
+
+    // project from 1 -> 5 is use spring boot 2
+//    id "org.springframework.boot" version "2.7.15"
+
+    // project from 6 use spring boot 3
+    id "org.springframework.boot" version "3.1.4"
+    id "io.spring.dependency-management" version "1.1.0"
+    id "org.flywaydb.flyway" version "9.22.1"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('org.springframework.boot:spring-boot-starter-security')
+    implementation('org.postgresql:postgresql')
+    implementation('javax.persistence:javax.persistence-api:2.2')
+    implementation 'org.projectlombok:lombok:1.18.26'
+    implementation('org.flywaydb:flyway-core:9.22.1')
+
+    implementation('io.hypersistence:hypersistence-utils-hibernate-62:3.5.2')
+
+    implementation 'org.springframework.security:spring-security-oauth2-resource-server:6.1.4'
+    implementation 'org.springframework.security:spring-security-oauth2-jose:6.1.4'
+
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.28'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
+}
+

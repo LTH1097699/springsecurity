@@ -1,0 +1,8 @@
+rootProject.name = "springsecurity"
+include("springsecurity6_oauth2authorizationserver")
+include("springsecurity7_oauth2resourceserver")
+include("springsecurity8_oauth2clientserver")
+
+include("springsecurity9_oauth2multitenancy")
+include("springsecurity9_oauth2multitenancy_resourceserver")
+include("springsecurity9_oauth2multitennancy_jwtauthenticationserver")

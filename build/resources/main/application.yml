@@ -1,0 +1,10 @@
+key:
+  secret: "123456"
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/test"
+    username: "root"
+    password: "123456"
+  flyway:
+    enable: true
+    locations: filesystem:src/main/resources/db.miragtion

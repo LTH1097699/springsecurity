@@ -1,0 +1,66 @@
+package io.springsecurity6_oauthauthorizationserver;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.util.Base64;
+
+@SpringBootApplication
+//@EnableJpaRepositories("io.springsecurity6_oauthauthorizationserver.*")
+public class Application6 {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application6.class);
+
+        byte[] code = new byte[32];
+        SecureRandom sr = new SecureRandom();
+        sr.nextBytes(code);
+
+
+        String code_verifier = Base64.getUrlEncoder()
+                .withoutPadding()
+                .encodeToString(code);
+
+        String code_challenge = null;
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] digested = md.digest(code_verifier.getBytes());
+
+            code_challenge = Base64.getUrlEncoder()
+                    .withoutPadding()
+                    .encodeToString(digested);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        String redirect_uri = "https://springone.io/authorize";
+
+        String loginAndReceiveAuthorCode = "http://localhost:8080/oauth2/authorize?"+
+                "response_type=code"+
+                "&client_id=client" +
+                "&scope=openid" +
+                "&redirect_uri=" + URLEncoder.encode(redirect_uri, StandardCharsets.UTF_8)+
+                "&code_challenge="+code_challenge+
+                "&code_challenge_method=S256";
+
+        // https://datatracker.ietf.org/doc/html/rfc6749#section-5.2
+        String resendAuthorCode = "http://localhost:8080/oauth2/token?"+
+                "client_id=client" +
+                "&redirect_uri=" + redirect_uri+
+                "&grant_type=authorization_code"+
+                "&code_verifier="+code_verifier+
+                "&code=";
+
+        String s = new BCryptPasswordEncoder().encode("secret");
+        System.out.println(loginAndReceiveAuthorCode);
+        System.out.println(resendAuthorCode);
+    }
+}
